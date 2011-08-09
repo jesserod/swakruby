@@ -15,4 +15,12 @@ class String
     return "[#{fg ? 3 : 4}#{color_int}m#{self}[#{fg ? 3 : 4}9m"
   end
 
+  def is_i?
+    true if Integer(self) rescue false
+  end
+
+  def is_f?
+    true if Float(self) rescue false
+  end
+
 end
