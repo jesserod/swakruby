@@ -23,7 +23,31 @@ class String
     true if Float(self) rescue false
   end
 
+
+  def to_i_strict
+    if is_i?
+      return to_i
+    else
+      raise "String '#{self}' cannot be converted to an int"
+    end
+      
+  end
+
+  def to_f_strict
+    if is_f?
+      return to_f
+    else
+      raise "String '#{self}' cannot be converted to a float"
+    end
+  end
+
 end
+
+
+
+#######################################################
+#######################################################
+
 
 class Array
 
