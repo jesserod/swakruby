@@ -1,9 +1,9 @@
 Overview
 ============
 
-This gem provides several classes useful for bioinformatics.
+This gem provides a handful of helpful ruby mixins, methods, etc.
 
-To install, just install the `bix` gem:
+To install, just install the `swak` gem:
 
-    sudo gem install bix
+    sudo gem install swak
 
