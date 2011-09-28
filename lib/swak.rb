@@ -99,4 +99,32 @@ class Array
 	def mean
 		return self.avg
 	end
+
+  def argmax
+    max_i = 0
+    max_val = self[max_i]
+
+    self.each_with_index do |x, i|
+      if x > max_val
+        max_val = x
+        max_i = i
+      end
+    end
+
+    return max_i
+  end
+
+  def argmin
+    min_i = 0
+    min_val = self[min_i]
+
+    self.each_with_index do |x, i|
+      if x < min_val
+        min_val = x
+        min_i = i
+      end
+    end
+
+    return min_i
+  end
 end 
