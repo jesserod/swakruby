@@ -14,7 +14,12 @@ class String
     color_int = AnsiMap[color]
     return "[#{fg ? 3 : 4}#{color_int}m#{self}[#{fg ? 3 : 4}9m"
   end
+end
 
+#######################################################
+#######################################################
+
+class Object
   def is_i?
     true if Integer(self) rescue false
   end
@@ -22,7 +27,6 @@ class String
   def is_f?
     true if Float(self) rescue false
   end
-
 
   def to_i_strict
     if is_i?
@@ -40,9 +44,16 @@ class String
       raise "String '#{self}' cannot be converted to a float"
     end
   end
-
 end
 
+class NilClass
+  undef_method(:is_i?)
+  undef_method(:is_f?)
+  undef_method(:to_i_strict)
+  undef_method(:to_f_strict)
+  undef_method(:to_f)
+  undef_method(:to_i)
+end
 
 
 #######################################################
