@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '.', 'logger')
+require File.join(File.dirname(__FILE__), 'swak', 'logger')
 
 class String
   AnsiMap = {"k" => 0,
