@@ -1,3 +1,5 @@
+require File.join(File.dirname(__FILE__), '.', 'logger')
+
 class String
   AnsiMap = {"k" => 0,
              "r" => 1,
@@ -53,6 +55,12 @@ class NilClass
   undef_method(:to_f_strict)
   undef_method(:to_f)
   undef_method(:to_i)
+end
+
+class Float
+  def is_i?
+    return self == self.to_i
+  end
 end
 
 
