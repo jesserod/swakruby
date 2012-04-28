@@ -16,6 +16,12 @@ class String
     color_int = AnsiMap[color]
     return "[#{fg ? 3 : 4}#{color_int}m#{self}[#{fg ? 3 : 4}9m"
   end
+
+  # Wraps long string by lines, using whitespace boundaries
+  def wrap(max_chars_per_line=80)
+    return gsub(/\n/," ").scan(/\S.{0,#{max_chars_per_line-2}}\S(?=\s|$)|\S+/).join("\n")
+  end
+
 end
 
 #######################################################
