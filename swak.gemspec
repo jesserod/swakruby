@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'swak'
-  s.version     = '0.0.9'
-  s.date        = 2012-4-27
+  s.version     = '0.1.0'
+  s.date        = 2012-6-14
   s.summary     = "Swiss Army Knife"
   s.description = "Random tools and mixins"
   s.authors     = ["Jesse Rodriguez"]
