@@ -15,4 +15,4 @@ Features
 * output logger
 * string colorization
 * wrapping of long strings
-* two-nonoveralpping-interval-list intersection (n log n)
+* two-nonoveralpping-interval-list intersection
