@@ -1,5 +1,6 @@
 require File.join(File.dirname(__FILE__), 'swak', 'logger')
 require File.join(File.dirname(__FILE__), 'swak', 'interval')
+require File.join(File.dirname(__FILE__), 'swak', 'crypt')
 
 class String
   AnsiMap = {"k" => 0,
