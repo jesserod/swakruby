@@ -1,6 +1,0 @@
-cd swak   # Thu Jun 14 16:55:38 PDT 2012
-ls   # Thu Jun 14 16:55:38 PDT 2012
-vim ../swak/logger.rb   # Thu Jun 14 16:55:48 PDT 2012
-ls   # Thu Jun 14 16:55:53 PDT 2012
-cd swak/   # Tue Jul 10 14:00:10 PDT 2012
-ls   # Tue Jul 10 14:00:11 PDT 2012
