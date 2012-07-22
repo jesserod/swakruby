@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'swak'
-  s.version     = '0.1.4'
+  s.version     = '0.1.5'
   s.date        = 2012-7-16
   s.summary     = "Swiss Army Knife"
   s.description = "Random tools and mixins"
