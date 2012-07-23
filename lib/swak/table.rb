@@ -45,6 +45,10 @@ module Swak
       else
         io = io_or_fn
       end
+
+      table = []
+      delim = opts[:delim] || "\t"
+
       if opts[:has_header] || opts[:smart]
         header = io.gets.chomp 
         opts[:header] = header
@@ -53,9 +57,6 @@ module Swak
           header_as_fields[0][0] = ""
         end
       end
-      
-      table = []
-      delim = opts[:delim] || "\t"
 
       case opts[:type].to_s
       when "Integer"
