@@ -48,6 +48,10 @@ module Swak
       if opts[:has_header] || opts[:smart]
         header = io.gets.chomp 
         opts[:header] = header
+        header_as_fields = header.split(delim)
+        if header_as_fields.size > 0 && header_as_fields[0][0] == '#'
+          header_as_fields[0][0] = ""
+        end
       end
       
       table = []
@@ -63,7 +67,7 @@ module Swak
       end
 
       if opts[:smart]
-        row_proc = Proc.new{|row| SmartRow.new(header.split(delim), row) }
+        row_proc = Proc.new{|row| SmartRow.new(header_as_fields, row) }
       else
         row_proc = Proc.new{|row| row}
       end
