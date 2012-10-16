@@ -4,7 +4,7 @@ module Swak
     class GaussianDistribution
       attr_reader :mean, :stddev, :variance, :rng
 
-      def initialize(mean=0.0, stddev=1.0, rng = lambda { Kernel.rand })
+      def initialize(mean=0.0, stddev=1.0, rng=lambda { Kernel.rand })
         if stddev <= 0.0
           raise ArgumentError, "Nonpositive stddev"
         end
@@ -31,6 +31,10 @@ module Swak
           y = @other
         end
         return @mean + y * @stddev
+      end
+
+      def pdf(x)
+        return 1.0 / (@stddev * Math.sqrt(2.0 * Math::PI)) * Math.exp(-((x - @mean) / @stddev)**2 / 2.0)
       end
 
     end

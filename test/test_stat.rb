@@ -17,7 +17,17 @@ puts 'Testing error handling'.color('m')
 begin
   Swak::Stat::GaussianDistribution.new(-1.0, -1.0)
 rescue Exception => e
-  puts 'Got expected exception (#{e.inspect})'
+  puts "Got expected exception (#{e.inspect})"
+end
+
+begin
+  puts 'Testing pdf'.color('m')
+
+  raise if r.pdf(-0.5) != r.pdf(0.5)
+
+  y = r.pdf(1.0)
+  puts "pdf(1.0) = #{y}"
+  raise unless 0.24 < y and y < 0.242   # Tolerate some error
 end
 
 puts 'Passed all tests'.color('g')
