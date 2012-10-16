@@ -14,7 +14,7 @@ module Swak
       end
 
       def rand
-        # Uses Box-Muller transforms in polar form
+        # Uses Box-Muller transform in polar form.
         # See http://en.wikipedia.org/wiki/Box-Muller_transform#Polar_form
         if (@regen = !@regen)
           s, u, v = 0, 0, 0
